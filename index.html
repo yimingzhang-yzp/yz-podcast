@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>YZ Podcast — 日本と世界、AIの今日を</title>
+<meta name="description" content="AIが毎日生成する、AIニュースのポッドキャスト。日本版と世界版を1日2本、各7分。2人のAIホストがお届けします。まもなくリリース。" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..600&family=Geist:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════ NAV ══════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="orb"></span>YZ Podcast</a>
+    <div class="nav-links">
+      <button class="nav-cta" data-signup>無料で聴く</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>毎日 4回 配信 · 各7分 · まもなくリリース</span>
+      <p class="hero-sub">日本と世界、AIの今日を、2人のAIホストが</p>
+      <h1>Today<span class="comma">,</span><br><em>in AI.</em></h1>
+      <p class="hero-lede">
+        その日のAIニュースを、AIが自動で台本にして音声化。
+        日本と世界、それぞれ約7分のポッドキャストを毎日お届けします。
+        通勤の電車でも、家事の間でも、聴くだけで今日のAIがわかる。
+      </p>
+      <div class="hero-cta-row">
+        <button class="btn-primary" data-signup>
+          無料で聴く
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#06140C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <span class="price-note">
+          <b>1ヶ月間 無料</b>その後は月額980円
+        </span>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><span class="num">7<span style="font-size:14px;font-weight:500;">分</span></span><span class="lbl">1本あたり</span></div>
+        <div class="div"></div>
+        <div class="m"><span class="num">2<span style="font-size:14px;font-weight:500;">版</span></span><span class="lbl">日本 / 世界</span></div>
+        <div class="div"></div>
+        <div class="m"><span class="num">8<span style="font-size:14px;font-weight:500;">声</span></span><span class="lbl">選べるホスト</span></div>
+      </div>
+    </div>
+
+    <!-- phone: faithful app reproduction -->
+    <div class="phone-stage">
+      <div class="phone-glow"></div>
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="phone-screen">
+          <div class="statusbar">
+            <span>17:08</span>
+            <span class="right">
+              <svg width="16" height="11" viewBox="0 0 16 11" fill="var(--ink)"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4" y="5" width="3" height="6" rx="1"/><rect x="8" y="3" width="3" height="8" rx="1"/><rect x="12" y="1" width="3" height="10" rx="1"/></svg>
+              <svg width="22" height="11" viewBox="0 0 22 11" fill="none"><rect x="0.5" y="0.5" width="18" height="10" rx="2.5" stroke="var(--ink)" opacity="0.5"/><rect x="2" y="2" width="14" height="7" rx="1" fill="var(--accent)"/><rect x="19.5" y="3.5" width="1.5" height="4" rx="0.75" fill="var(--ink)" opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="scr-body">
+            <div class="scr-top">
+              <span class="scr-brand">YZ Podcast</span>
+              <span class="scr-date">5/21 THU</span>
+            </div>
+            <div class="scr-subtitle">日本と世界、AIの今日を、2人がお届けします。</div>
+            <div class="scr-h1">Today<span class="c">,</span><br><em>in AI.</em></div>
+
+            <!-- live hero card -->
+            <div class="app-hero-card">
+              <div class="corner-glow"></div>
+              <div class="ahc-tag">
+                <span class="onair" style="width:6px;height:6px;"></span>
+                <span class="lab">ON AIR</span>
+                <span class="ahc-reg jp"><span class="d"></span>日本</span>
+              </div>
+              <div class="ahc-main">
+                <div class="ahc-orbs">
+                  <div class="ahc-orb haru"></div>
+                  <div class="ahc-orb rin"></div>
+                </div>
+                <div class="ahc-title">文化庁・著作権ガイドライン改訂案</div>
+              </div>
+              <div class="ahc-wave" id="ahcwave"></div>
+              <div class="ahc-foot">
+                <div class="ahc-chips">
+                  <span class="app-chip"><span class="cd" style="background:#9C7BFF"></span>AI規制・政策・地政学</span>
+                  <span class="app-chip"><span class="cd" style="background:#FF8FB1"></span>AI倫理・リスク</span>
+                </div>
+                <div class="ahc-play">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="#0A1810"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- schedule -->
+            <div class="app-sec-h">本日のPodcast</div>
+
+            <div class="app-slot">
+              <div class="stime">
+                <div class="tt" style="color:var(--ink);">17:00</div>
+                <div class="tl">EVENING WRAP</div>
+              </div>
+              <div class="seps">
+                <div class="app-ep">
+                  <div class="bar jp"></div>
+                  <div class="ebody">
+                    <div class="etop">
+                      <span class="ereg jp"><span class="d"></span>日本</span>
+                      <span style="font-family:var(--mono);font-size:7px;font-weight:700;letter-spacing:.8px;color:var(--accent);display:inline-flex;align-items:center;gap:3px;"><span class="onair" style="width:4px;height:4px;"></span>ON AIR</span>
+                      <span class="edur">07:34</span>
+                    </div>
+                    <div class="etitle">文化庁・著作権ガイドライン改訂案／PFN×トヨタ提携拡大</div>
+                  </div>
+                </div>
+                <div class="app-ep">
+                  <div class="bar world"></div>
+                  <div class="ebody">
+                    <div class="etop">
+                      <span class="ereg world"><span class="d"></span>WORLD</span>
+                      <span class="edur" style="margin-left:auto;">IN 13 MIN</span>
+                    </div>
+                    <div class="etitle">中国の生成AI規制が再強化／Cursor IPO噂の真相</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-slot">
+              <div class="stime">
+                <div class="tt" style="color:var(--ink-dim);">11:00</div>
+                <div class="tl">MIDDAY DEEP DIVE</div>
+              </div>
+              <div class="seps">
+                <div class="app-ep played">
+                  <div class="bar jp"></div>
+                  <div class="ebody">
+                    <div class="etop">
+                      <span class="ereg jp"><span class="d"></span>日本</span>
+                      <span class="edur">07:24</span>
+                    </div>
+                    <div class="etitle">LINEヤフー生成AI戦略／メルカリのエージェント導入</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- mini player -->
+          <div class="scr-mini">
+            <div class="mo-wrap"><div class="mo a"></div><div class="mo b"></div></div>
+            <div class="mt">
+              <div class="a"><span class="onair" style="width:4px;height:4px;"></span>ON AIR · 夕方ラップアップ</div>
+              <div class="b">文化庁・著作権ガイドライン改訂案…</div>
+            </div>
+            <div class="mp">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="#0A1810"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+            </div>
+          </div>
+
+          <div class="scr-tabs">
+            <div class="tb on"><svg class="ic" viewBox="0 0 24 24" fill="#F0EAD6"><rect x="2" y="10" width="2.4" height="4" rx="1.2"/><rect x="6" y="7" width="2.4" height="10" rx="1.2"/><rect x="10" y="3" width="2.4" height="18" rx="1.2"/><rect x="14" y="7" width="2.4" height="10" rx="1.2"/><rect x="18" y="10" width="2.4" height="4" rx="1.2"/></svg>今日</div>
+            <div class="tb"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#6F6A5F" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>アーカイブ</div>
+            <div class="tb"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#6F6A5F" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>マイページ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════ TICKER ══════ -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<!-- ══════ HOW IT WORKS ══════ -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>How it works</span>
+      <h2 style="white-space:nowrap;">朝・昼・夕・夜。<br><em>一日4回、置いていかれない。</em></h2>
+      <p>毎日 5時・11時・17時・22時に、日本版と世界版を1本ずつ配信。生活のリズムに合わせて、その時間に知っておくべきAIニュースだけが届きます。</p>
+    </div>
+    <div class="slots reveal">
+      <div class="slot">
+        <span class="ix">01</span>
+        <div class="time">05:00</div>
+        <div class="nm">朝のブリーフ</div>
+        <div class="ds">夜のあいだに動いた海外の発表を、出かける前に。要点だけ短く。</div>
+      </div>
+      <div class="slot">
+        <span class="ix">02</span>
+        <div class="time">11:00</div>
+        <div class="nm">昼のディープダイブ</div>
+        <div class="ds">注目トピックを一歩深く。技術や企業戦略の背景まで掘り下げます。</div>
+      </div>
+      <div class="slot">
+        <span class="ix">03</span>
+        <div class="time">17:00</div>
+        <div class="nm">夕方ラップアップ</div>
+        <div class="ds">その日の国内ニュースを整理。規制や提携の論点を分かりやすく。</div>
+      </div>
+      <div class="slot">
+        <span class="ix">04</span>
+        <div class="time">22:00</div>
+        <div class="nm">夜の展望</div>
+        <div class="ds">明日につながる動き。ロードマップや調査レポートを先読みします。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FEATURES ══════ -->
+<section class="sec" id="features" style="padding-top:40px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Why YZ Podcast</span>
+      <h2>読む時間がなくても、<br><em>聴く7分なら、ある。</em></h2>
+    </div>
+    <div class="feat reveal">
+      <div class="feat-card">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="#3DDC97"><path d="M12 2l1.6 5.6L19 9l-5.4 1.4L12 16l-1.6-5.6L5 9l5.4-1.4L12 2z"/></svg></div>
+        <h3>AIが毎日、自動で生成</h3>
+        <p>その日の一次ソースをAIが収集・要約し、2人の会話形式の台本に。人手をかけずに、毎日欠かさず最新の音声が届きます。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3DDC97" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <h3>日本版と世界版を1本ずつ</h3>
+        <p>国内の規制・企業・研究と、米中を中心とした海外動向。視点の異なる2本で、抜け漏れのない全体像がつかめます。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3DDC97" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+        <h3>ホストの声を選べる</h3>
+        <p>個性の異なる8人のAIスピーカーから、進行役の2人を自由に組み合わせ。あなた好みのトーンで毎日聴けます。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3DDC97" stroke-width="1.6"><path d="M4 12l5 5 11-12"/></svg></div>
+        <h3>ライブ字幕つき</h3>
+        <p>聴きながら読める同期字幕を表示。専門用語が出ても、目で追って理解できます。日本語・英語の切り替えにも対応。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3DDC97" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>過去回はいつでも</h3>
+        <p>聞き逃しても大丈夫。アーカイブから日付ごとに、過去の日本版・世界版をいつでも聴き直せます。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="#3DDC97"><rect x="2" y="10" width="2.4" height="4" rx="1.2"/><rect x="6" y="7" width="2.4" height="10" rx="1.2"/><rect x="10" y="3" width="2.4" height="18" rx="1.2"/><rect x="14" y="7" width="2.4" height="10" rx="1.2"/><rect x="18" y="10" width="2.4" height="4" rx="1.2"/></svg></div>
+        <h3>移動中も、ながらでも</h3>
+        <p>1本は約7分。通勤、家事、運動のあいだに。画面を見なくても、今日のAIの要点が耳から入ってきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ SPEAKERS ══════ -->
+<section class="sec" id="speakers" style="background:rgba(255,255,255,.012);border-top:0.5px solid var(--line-soft);border-bottom:0.5px solid var(--line-soft);">
+  <div class="wrap speakers-wrap">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span>Voice characters</span>
+      <h2 style="font-family:var(--display);font-weight:380;font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.7px;margin:16px 0 0;">8つの声から、<br><em>進行役を2人。</em></h2>
+      <p style="font-size:15px;color:var(--ink-dim);line-height:1.7;margin:18px 0 0;max-width:400px;">穏やかな低音、機知に富む批評、テンポの速い明るい声。それぞれ個性の違うAIスピーカーから、あなたの聴きたいペアを選べます。</p>
+    </div>
+    <div class="voice-grid reveal" id="voices"></div>
+  </div>
+</section>
+
+<!-- ══════ EMAIL CTA ══════ -->
+<section class="final" id="get">
+  <div class="glow"></div>
+  <div class="wrap reveal">
+    <span class="eyebrow" style="justify-content:center;"><span class="dot"></span>Coming soon</span>
+    <h2 style="white-space:nowrap;">今日のAIは、<em>今日</em>聴く。</h2>
+    <p>YZ Podcast はまもなくリリース。メールアドレスを登録すると、配信開始の初日にお知らせします。</p>
+    <div class="signup-inline">
+      <input type="email" id="inlineEmail" placeholder="メールアドレスを入力" autocomplete="email" />
+      <button data-signup-inline>無料で聴く</button>
+    </div>
+    <div class="final-note">最初の1ヶ月間は無料 · その後は月額980円 · 解除はいつでも可能</div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div>
+        <div class="foot-brand"><span class="orb"></span>YZ Podcast</div>
+        <div class="foot-tag">日本と世界、AIの今日を、2人のAIホストが毎日お届けします。</div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Listen</h5>
+          <a data-signup>無料で聴く</a>
+        </div>
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="https://www.yz-partners.co.jp/" target="_blank" rel="noopener">運営会社</a>
+          <a href="terms.html">利用規約</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 YZ Podcast</span>
+      <span>Made with AI, every single day.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════ SIGNUP MODAL ══════ -->
+<div class="modal-overlay" id="modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="mglow"></div>
+    <button class="modal-close" aria-label="閉じる" id="modalClose">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <!-- form state -->
+    <div id="formState">
+      <div class="m-eyebrow"><span class="onair" style="width:6px;height:6px;"></span>Coming soon</div>
+      <h3 id="modalTitle">YZ Podcast、<br><em>まもなくリリース。</em></h3>
+      <p class="m-sub">先行登録で、配信初日にメールでお知らせします。</p>
+      <label for="modalEmail">メールアドレス</label>
+      <input type="email" id="modalEmail" placeholder="you@example.com" autocomplete="email" />
+      <div class="err" id="emailErr"></div>
+      <button class="modal-submit" id="modalSubmit">
+        登録する
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#06140C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <div class="m-fine">最初の1ヶ月間は無料。その後は月額980円・解除はいつでも可能です。</div>
+    </div>
+
+    <!-- thank-you state -->
+    <div id="thanksState" class="thanks" style="display:none;">
+      <div class="check">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5 11-12"/></svg>
+      </div>
+      <h3>登録ありがとうございます。</h3>
+      <p>配信開始の初日に、ご登録のメールアドレスへお知らせします。それまで、少しだけお待ちください。</p>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
