@@ -126,24 +126,24 @@
     if(lastFocus) lastFocus.focus();
   }
 
-  // ── Google 広告 コンバージョン設定 ──
-  // 変換ID（ベースタグは各HTMLの <head> に設置済み）
-  const ADS_CONVERSION_ID='AW-18240298925';
-  // コンバージョンラベル：Google広告のコンバージョン設定 →「イベントスニペット」の
-  //   send_to: 'AW-18240298925/●●●●●●●●'  の「/」以降を貼り付けてください。
-  // 例: const ADS_CONVERSION_LABEL='AbC-D_efGhIjKlMnOp';
-  const ADS_CONVERSION_LABEL='';
+  // ── Google 広告 コンバージョン計測 ──
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18240298925/oPFUCLu6osAcEK2_0_lD',
+        'event_callback': callback
+    });
+    return false;
+  }
 
   // ── CONVERSION EVENT ──
-  // メール登録完了時に1度だけ発火する。
+  // メール登録完了時（「登録する」ボタン押下）に1度だけ発火する。
   function fireConversion(email){
-    if(typeof gtag==='function'){
-      if(ADS_CONVERSION_LABEL){
-        gtag('event','conversion',{'send_to':ADS_CONVERSION_ID+'/'+ADS_CONVERSION_LABEL});
-      }else if(window.console){
-        console.warn('[ads] コンバージョンラベル未設定のため conversion を送信していません（ADS_CONVERSION_LABEL を設定してください）');
-      }
-    }
+    if(typeof gtag==='function') gtag_report_conversion();
     if(window.console) console.log('[conversion] email signup completed');
   }
 
