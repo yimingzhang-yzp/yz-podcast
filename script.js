@@ -126,14 +126,24 @@
     if(lastFocus) lastFocus.focus();
   }
 
+  // ── Google 広告 コンバージョン設定 ──
+  // 変換ID（ベースタグは各HTMLの <head> に設置済み）
+  const ADS_CONVERSION_ID='AW-18240298925';
+  // コンバージョンラベル：Google広告のコンバージョン設定 →「イベントスニペット」の
+  //   send_to: 'AW-18240298925/●●●●●●●●'  の「/」以降を貼り付けてください。
+  // 例: const ADS_CONVERSION_LABEL='AbC-D_efGhIjKlMnOp';
+  const ADS_CONVERSION_LABEL='';
+
   // ── CONVERSION EVENT ──
-  // ここがリスティング広告のコンバージョン計測ポイント。
-  // メール登録完了時に1度だけ発火する。Google Ads / GA4 等の
-  // 計測タグをこの関数内に設置してください。
+  // メール登録完了時に1度だけ発火する。
   function fireConversion(email){
-    // 例: gtag('event','conversion',{'send_to':'AW-XXXX/YYYY'});
-    // 例: gtag('event','sign_up',{method:'email'});
-    // 例: window.dataLayer && window.dataLayer.push({event:'lead_signup', email_domain:(email.split('@')[1]||'')});
+    if(typeof gtag==='function'){
+      if(ADS_CONVERSION_LABEL){
+        gtag('event','conversion',{'send_to':ADS_CONVERSION_ID+'/'+ADS_CONVERSION_LABEL});
+      }else if(window.console){
+        console.warn('[ads] コンバージョンラベル未設定のため conversion を送信していません（ADS_CONVERSION_LABEL を設定してください）');
+      }
+    }
     if(window.console) console.log('[conversion] email signup completed');
   }
 
